@@ -2,7 +2,7 @@
 // SLIDE NAVIGATION LOGIC
 // ==========================================================================
 let currentSlide = 1;
-const totalSlides = 17;
+const totalSlides = 19;
 
 function updateSlide() {
     // Hide Back to Top button on slide change
@@ -42,7 +42,7 @@ function updateSlide() {
     }
 
     // Initialize slide 14 interactive mockup when loaded
-    if (currentSlide === 14) {
+    if (currentSlide === 16) {
         const firstItem = document.querySelector('.steps-list .step-list-item:nth-child(1)');
         if (firstItem) {
             showStepGuide('step1', firstItem);
@@ -50,7 +50,7 @@ function updateSlide() {
     }
 
     // Initialize Slide 15 Quiz when active
-    if (currentSlide === 15) {
+    if (currentSlide === 17) {
         initQuiz();
     }
 }
