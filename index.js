@@ -504,10 +504,28 @@ const quizQuestions = [
         ]
     },
     {
+        text: "Bilgisayarların açıkça kodlanmış kurallar yerine, doğrudan verileri analiz ederek kuralları ve örüntüleri kendi kendine keşfetmesini sağlayan yapay zeka alt dalı hangisidir?",
+        options: [
+            { text: "Geleneksel Programlama", letter: "A", correct: false, feedback: "Yanlış. Geleneksel programlamada kuralları insan yazar, bilgisayar sadece uygular." },
+            { text: "Makine Öğrenmesi (Machine Learning)", letter: "B", correct: true, feedback: "Tebrikler! Makine öğrenmesi, açık kurallar olmadan doğrudan veri ve sonuçlardan yola çıkarak kuralları (modelleri) üreten sistemdir." },
+            { text: "HTML Tasarımı", letter: "C", correct: false, feedback: "Yanlış. HTML bir işaretleme dilidir ve web sayfası yapısı oluşturur." },
+            { text: "API Entegrasyonu", letter: "D", correct: false, feedback: "Yanlış. API entegrasyonu iki sistemin haberleşmesini sağlar." }
+        ]
+    },
+    {
+        text: "İnsan beyninin nöron yapısından esinlenen ve özellik çıkarımını (kenarlar, şekiller, anlamlar) katmanlar halinde kendi kendine yapabilen çok katmanlı yapay sinir ağları sistemi nedir?",
+        options: [
+            { text: "Kural Tabanlı Sohbet Robotu", letter: "A", correct: false, feedback: "Yanlış. Kural tabanlı robotlar katmanlı sinir ağları kullanmaz." },
+            { text: "Derin Öğrenme (Deep Learning)", letter: "B", correct: true, feedback: "Harika! Derin öğrenme, çok katmanlı yapay sinir ağlarıyla karmaşık örüntüleri hiyerarşik olarak öğrenen makine öğrenmesi alt dalıdır." },
+            { text: "Doğrusal Arama Algoritması", letter: "C", correct: false, feedback: "Yanlış. Doğrusal arama en basit arama algoritmalarından biridir, sinir ağı içermez." },
+            { text: "Prompt Mühendisliği", letter: "D", correct: false, feedback: "Yanlış. Prompt mühendisliği, dil modellerine doğru girdi yazma işlemidir." }
+        ]
+    },
+    {
         text: "Fen bilimleri kazanımlarına uygun, kesin gerçeklere dayalı sınav soruları hazırlarken Temperature (Sıcaklık) parametresi kaça ayarlanmalıdır?",
         options: [
             { text: "2.0 (Maksimum Yaratıcılık)", letter: "A", correct: false, feedback: "Yanlış. Yüksek sıcaklık esnekliği ve hayal gücünü artırır, ancak bilimsel sorularda hata riski doğurur." },
-            { text: "1.0 (Orta Yaratıcılık)", letter: "B", correct: false, feedback: "Yanlış. 1.0 genel masal veya beyin fırtınaları için uygundur; kesin bilimsel veriler için yüksek kalır." },
+            { text: "1.0 (Orta Yaratıcılık)", letter: "B", correct: false, feedback: "Yanlış. 1.0 genel masal veya beyin fıırılmaları için uygundur; kesin bilimsel veriler için yüksek kalır." },
             { text: "0.0 (Düşük / En Kararlı)", letter: "C", correct: true, feedback: "Muhteşem! Kesin gerçekler, formüller ve ölçme değerlendirme testleri tasarlarken Temperature 0.0'a en yakın değerde tutulmalıdır." },
             { text: "1.5 (Yüksek Yaratıcılık)", letter: "D", correct: false, feedback: "Yanlış. Yüksek sıcaklık yaratıcı masal veya şiir yazmak için uygundur." }
         ]

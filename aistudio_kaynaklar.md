@@ -1,4 +1,4 @@
-﻿# Eğitimciler İçin Yapay Zeka ve Google AI Studio Kaynak Dökümanı
+# Eğitimciler İçin Yapay Zeka ve Google AI Studio Kaynak Dökümanı
 
 Bu döküman, öğretmenlerin yapay zekanın temellerini anlamaları, tarihsel gelişimini incelemeleri, günümüzdeki sınırlarını keşfetmeleri ve sınıflarında bu teknolojiyi güvenle kullanabilmeleri için hazırlanmış kapsamlı bir rehberdir.
 
@@ -199,18 +199,22 @@ Bu bölüm, öğretmen eğitiminde ele alınan 10 ana modülün detaylı açıkl
 
 ## 10. Ölçme ve Değerlendirme Etkinliği (Genişletilmiş Quiz)
 
-Öğretmen eğitimlerinde kullanılmak üzere 5 adet kontrol sorusu:
+Öğretmen eğitimlerinde kullanılmak üzere 7 adet kontrol sorusu:
 
 1. **Yapay zeka modellerinin bazen doğru gibi görünen ama tamamen yanlış veya uydurma bilgiler üretmesine ne ad verilir?**
    * *Cevap:* Halüsinasyon (Uydurma)
 2. **Google AI Studio'da yapay zekanın tüm sohbet boyunca asla unutmaması gereken öğretmen rolünü tanımladığımız alan hangisidir?**
    * *Cevap:* System Instructions (Sistem Yönergeleri)
-3. **Soru hazırlarken yapay zekanın kararlı, net ve gerçekçi yanıtlar vermesi için hangi parametreyi sıfıra yaklaştırmalıyız?**
+3. **Bilgisayarların açıkça kodlanmış kurallar yerine, doğrudan verileri analiz ederek kuralları ve örüntüleri kendi kendine keşfetmesini sağlayan yapay zeka alt dalı hangisidir?**
+   * *Cevap:* Makine Öğrenmesi (Machine Learning)
+4. **İnsan beyninin nöron yapısından esinlenen ve özellik çıkarımını katmanlar halinde kendi kendine yapabilen çok katmanlı yapay sinir ağları sistemi nedir?**
+   * *Cevap:* Derin Öğrenme (Deep Learning)
+5. **Soru hazırlarken yapay zekanın kararlı, net ve gerçekçi yanıtlar vermesi için hangi parametreyi sıfıra yaklaştırmalıyız?**
    * *Cevap:* Temperature (Sıcaklık)
-4. **Yapay zeka çıktılarının güncel ve doğru web bilgileriyle desteklenmesini ve altına kaynak linkleri eklenmesini sağlayan AI Studio aracı hangisidir?**
-   * *Cevap:* Google Search Grounding
-5. **API anahtarımızı güvenceye almak için yayına almadan önce yapmamız gereken güvenlik önlemi nedir?**
-   * *Cevap:* API anahtarını koda doğrudan yazmamak, `.env` (Environment Variables) dosyasında saklamak ve API anahtarına IP/Domain kısıtlaması getirmek.
+6. **Tasarladığımız bir uygulamanın kodlarını Vercel'e deploy etmeden önce, API anahtarımızın (API Key) güvenliğini sağlamak için en doğru yöntem hangisidir?**
+   * *Cevap:* API anahtarını çevre değişkenlerinde (.env veya Vercel panelinde) saklamak.
+7. **Yapay zeka modellerinin veri gizliliği standartları açısından, MEB KVKK kurallarına uyum sağlamak için yapılması gereken en önemli eylem hangisidir?**
+   * *Cevap:* Yüklenen verileri anonimleştirmek ve kişisel kimlik bilgilerini sisteme girmemek.
 
 ---
 
