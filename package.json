@@ -1,19 +1,20 @@
 {
-  "name": "aistudio-educational-portal",
-  "version": "1.0.0",
-  "description": "Google AI Studio Eğitim Portalı",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.19.2",
-    "cors": "^2.8.5",
-    "@prisma/client": "^5.14.0",
-    "dotenv": "^16.4.5"
-  },
-  "devDependencies": {
-    "prisma": "^5.14.0"
-  }
+    "name": "aistudio-educational-portal",
+    "version": "1.0.0",
+    "description": "Google AI Studio Egitim Portali",
+    "main": "server.js",
+    "scripts": {
+          "start": "node server.js",
+          "dev": "node server.js",
+          "postinstall": "prisma generate"
+    },
+    "dependencies": {
+          "express": "^4.19.2",
+          "cors": "^2.8.5",
+          "@prisma/client": "^5.14.0",
+          "dotenv": "^16.4.5"
+    },
+    "devDependencies": {
+          "prisma": "^5.14.0"
+    }
 }
