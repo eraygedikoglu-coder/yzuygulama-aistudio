@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Öğretmenler için Google AI Studio ve Yapay Zeka temellerini tanıtan etkileşimli, modern ve samimi bir sunum.">
+    <title>Google AI Studio: Sınıfınızdaki Yeni Yapay Zeka Atölyesi 🎓</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons for visuals -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Background Animated Gradients -->
+    <div class="bg-gradient-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+
+    <!-- Presentation Wrapper -->
+    <main class="presentation-container" id="presentation">
+        
+        <!-- TOP BAR: Progress & Title -->
+        <header class="presentation-header">
+            <div class="brand">
+                <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                <span>Google AI Studio Eğitim Sunumu</span>
+            </div>
+            <div class="header-nav">
+                <button class="nav-tab active" id="tab-presentation" onclick="switchMode('presentation')">
+                    <i class="fa-solid fa-person-chalkboard"></i> Sunum Modu
+                </button>
+                <button class="nav-tab" id="tab-handbook" onclick="switchMode('handbook')">
+                    <i class="fa-solid fa-book-open"></i> Eğitim Rehberi
+                </button>
+                <button class="nav-tab nav-tab-action" id="tab-restart-header" onclick="goToStart()" title="Eğitimin Başına Dön">
+                    <i class="fa-solid fa-arrow-rotate-left"></i> Başa Dön
+                </button>
+            </div>
+            <div class="slide-indicator" id="slide-number">1 / 15</div>
+        </header>
+
+        <!-- SLIDES CONTAINER -->
+        <div class="slides-wrapper" id="slides-wrapper">
+            
+            <!-- SLIDE 1: HERO -->
+            <section class="slide active" id="slide-1" data-index="1">
+                <div class="slide-content grid-2">
+                    <div class="text-content">
+                        <span class="badge">Eğitimde Yapay Zeka Çağı</span>
+                        <h1 class="slide-title">Yapay Zeka Sınıfınıza Geldi! 🎓</h1>
+                        <p class="lead-text">
+                            Merhaba Sevgili Öğretmenlerimiz! Ders hazırlıklarınızı kolaylaştıracak, öğrencilerinize özel asistanlar tasarlamanızı sağlayacak **Google AI Studio**'yu keşfetmeye hazır mısınız?
+                        </p>
+                        <div class="feature-bullets">
+                            <div class="bullet-item">
+                                <i class="fa-solid fa-heart bullet-icon"></i>
+                                <span>Klasik sohbet robotlarını unutun; kontrol tamamen sizde.</span>
+                            </div>
+                            <div class="bullet-item">
+                                <i class="fa-solid fa-wand-magic-sparkles bullet-icon"></i>
+                                <span>Sınıfınızın ihtiyaçlarına göre özel AI yardımcıları eğitin.</span>
+                            </div>
+                        </div>
+                        <!-- Theme Palette Selector -->
+                        <div class="theme-palette-container">
+                            <span class="palette-label"><i class="fa-solid fa-palette"></i> Arayüz Teması:</span>
+                            <div class="palette-options">
+                                <button class="palette-color default active" onclick="changeTheme('default')" aria-label="Varsayılan Tema"></button>
+                                <button class="palette-color emerald" onclick="changeTheme('emerald')" aria-label="Zümrüt Yeşili"></button>
+                                <button class="palette-color crimson" onclick="changeTheme('crimson')" aria-label="Kızıl Kırmızı"></button>
+                                <button class="palette-color ocean" onclick="changeTheme('ocean')" aria-label="Okyanus Mavisi"></button>
+                                <button class="palette-color amber" onclick="changeTheme('amber')" aria-label="Kehribar Sarısı"></button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary start-btn" onclick="nextSlide()">
+                            Hadi Başlayalım <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="visual-content">
+                        <div class="image-wrapper glass">
+                            <img src="images/ai_teacher_hero.png" alt="Yapay Zeka ve Öğretmen İş Birliği" id="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: WHAT IS AI? [NEW] -->
+            <section class="slide" id="slide-2" data-index="2">
+                <div class="slide-content grid-2">
+                    <div class="text-content">
+                        <span class="badge">Temel Kavramlar</span>
+                        <h2 class="slide-title">Yapay Zeka Nedir?</h2>
+                        <p class="normal-text">
+                            Yapay Zeka (AI), makinelerin veya bilgisayar sistemlerinin, insan benzeri bilişsel yetenekleri (öğrenme, muhakeme, problem çözme ve dil anlama) simüle etmesidir.
+                        </p>
+                        
+                        <!-- Brain Analogy Card -->
+                        <div class="analogy-card glass">
+                            <div class="analogy-icon"><i class="fa-solid fa-brain"></i></div>
+                            <div>
+                                <h4>Yapay Sinir Ağları Analojisi 🧠</h4>
+                                <p>Tıpkı insan beyninin deneyimler yoluyla nöronlar arasındaki bağları (sinapsları) güçlendirerek öğrenmesi gibi; yapay zeka modelleri de milyarlarca örnek veriyi inceleyerek dijital düğümler arasındaki bağların ağırlığını ayarlar ve desenleri öğrenir.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-content flex-center">
+                        <div class="comparison-box glass">
+                            <h3>Yapay Zeka Türleri</h3>
+                            <ul class="comparison-list">
+                                <li><i class="fa-solid fa-microchip text-success"></i> <strong>Dar Yapay Zeka (Weak AI):</strong> Sadece satranç oynamak veya hava durumunu tahmin etmek gibi tek bir göreve odaklanan sistemler.</li>
+                                <li><i class="fa-solid fa-wand-magic-sparkles text-success"></i> <strong>Üretken Yapay Zeka (GenAI):</strong> Metin, görsel, müzik veya video gibi yepyeni içerikler üretebilen modern sistemler.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: AI HISTORY [NEW] -->
+            <section class="slide" id="slide-3" data-index="3">
+                <div class="slide-content">
+                    <div class="text-center-header">
+                        <span class="badge">Zaman Tüneli</span>
+                        <h2 class="slide-title text-center">Yapay Zekanın Kısa Tarihi</h2>
+                        <p class="subtitle text-center">Fikirden gerçeğe yapay zekanın dönüm noktaları:</p>
+                    </div>
+                    <div class="timeline-container mt-4">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-scroll">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">1950</div>
+                                <h4>Turing Testi</h4>
+                                <p>Alan Turing, "Makineler düşünebilir mi?" sorusunu sorarak ilk zeka ölçütünü tanımladı.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">1956</div>
+                                <h4>Dartmouth Konferansı</h4>
+                                <p>"Yapay Zeka" terimi ilk kez resmi akademik bir çalışma alanı olarak tanımlandı.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">1970-90</div>
+                                <h4>AI Kışları</h4>
+                                <p>Beklentilerin karşılanamaması ve işlemci yetersizliği sebebiyle durgunluk dönemleri yaşandı.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">1997</div>
+                                <h4>Deep Blue & Kasparov</h4>
+                                <p>IBM'in bilgisayarı dünya satranç şampiyonunu yenerek ezberleri bozdu.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2012</div>
+                                <h4>Derin Öğrenme Patlaması</h4>
+                                <p>Yüksek ekran kartı güçleriyle yapay zeka nesneleri tanımada insanı geçti.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2017</div>
+                                <h4>Transformer Devrimi</h4>
+                                <p>Google, bugünkü dil modellerinin (Gemini, GPT) kalbi olan Transformer yapısını sundu.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">Bugün</div>
+                                <h4>Üretken AI Çağı</h4>
+                                <p>Çoklu modlu (yazı, ses, video, kod) modeller hayatımızın ve sınıfların bir parçası haline geldi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: CRAZY EXAMPLES [NEW] -->
+            <section class="slide" id="slide-4" data-index="4">
+                <div class="slide-content">
+                    <div class="text-center-header">
+                        <span class="badge">Teknolojinin Son Noktası</span>
+                        <h2 class="slide-title text-center">Yapay Zekanın Günümüzdeki Çılgın Aşaması</h2>
+                        <p class="subtitle text-center">Artık sadece sohbet robotu değiller; dünyayı ve bilimi kökten değiştiriyorlar!</p>
+                    </div>
+                    <div class="grid-4 mt-3">
+                        <div class="feature-card glass hover-up">
+                            <div class="card-icon cyan"><i class="fa-solid fa-dna"></i></div>
+                            <h3>AlphaFold (Biyoloji)</h3>
+                            <p>Bilim dünyasının 50 yıldır çözemediği <strong>protein katlanması</strong> problemini çözdü. İlaç tasarımlarını ve biyolojik araştırmaları yüzyıllarca hızlandırdı.</p>
+                        </div>
+                        <div class="feature-card glass hover-up">
+                            <div class="card-icon purple"><i class="fa-solid fa-video"></i></div>
+                            <h3>Sora & Veo (Sinematik Video)</h3>
+                            <p>Sadece tek bir metin cümlesinden fizik kurallarına tam uyumlu, 60 saniyelik fotogerçekçi, 3D tutarlı videolar üretebiliyorlar.</p>
+                        </div>
+                        <div class="feature-card glass hover-up">
+                            <div class="card-icon pink"><i class="fa-solid fa-infinity"></i></div>
+                            <h3>Gemini (2 Milyon Context)</h3>
+                            <p>Tek seferde <strong>kütüphane dolusu kitabı</strong>, 1 saatlik videoyu veya 30.000 satırlık kod bloğunu belleğinde tutarak saniyeler içinde analiz edebiliyor.</p>
+                        </div>
+                        <div class="feature-card glass hover-up">
+                            <div class="card-icon blue"><i class="fa-solid fa-square-root-variable"></i></div>
+                            <h3>Akıl Yürütme (o1 / o3)</h3>
+                            <p>Cevap vermeden önce kendi kendine "düşünme zinciri" kurarak matematik olimpiyatlarında derece yapan ve karmaşık kodları test eden yapay zekalar.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: WHY IMPORTANT? [NEW] -->
+            <section class="slide" id="slide-5" data-index="5">
+                <div class="slide-content grid-2">
+                    <div class="text-content">
+                        <span class="badge">Geleceğin İhtiyaçları</span>
+                        <h2 class="slide-title">Yapay Zeka Neden Önemli?</h2>
+                        <p class="normal-text">
+                            Yapay zeka sadece geçici bir heves değil; tarım devrimi ve sanayi devrimi gibi yeni bir <strong>teknolojik çağın başlangıcıdır</strong>.
+                        </p>
+                        <div class="safety-grid">
+                            <div class="safety-item glass">
+                                <div class="safety-icon text-info"><i class="fa-solid fa-hourglass-half"></i></div>
+                                <div>
+                                    <h4>Zaman Tasarrufu ve Verimlilik</h4>
+                                    <p>İnsanların saatler hatta günler süren veri analizlerini, rutin evrak ve yazışma işlerini saniyelere indirir.</p>
+                                </div>
+                            </div>
+                            <div class="safety-item glass">
+                                <div class="safety-icon text-warning"><i class="fa-solid fa-sliders"></i></div>
+                                <div>
+                                    <h4>Bireyselleştirilmiş Çözümler</h4>
+                                    <p>Tıptan eğitime her alanda kişisel verilere ve ihtiyaçlara göre tam uyumlu özelleştirilmiş hizmetler sunar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-content flex-center">
+                        <div class="comparison-box glass" style="border-color: rgba(6, 182, 212, 0.3); max-width: 550px; padding: 20px;">
+                            <h3 class="text-center" style="font-size: 1.25rem; margin-bottom: 12px;"><i class="fa-solid fa-briefcase"></i> İş Gücü Dönüşümü</h3>
+                            <div class="job-comparison">
+                                <div class="job-column future">
+                                    <h4 class="text-success" style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-square-plus"></i> Geleceğin Meslekleri</h4>
+                                    <ul>
+                                        <li><strong>Prompt Mühendisi:</strong> AI modelleriyle etkili iletişim tasarlayanlar.</li>
+                                        <li><strong>Yapay Zeka Etik Uzmanı:</strong> AI sistemlerinin güvenliğini denetleyenler.</li>
+                                        <li><strong>Eğitim Teknoloğu (EdTech):</strong> AI destekli kişisel ders araçları üretenler.</li>
+                                        <li><strong>Veri Küratörü:</strong> Modeller için nitelikli veri hazırlayanlar.</li>
+                                    </ul>
+                                </div>
+                                <div class="job-divider"></div>
+                                <div class="job-column fading">
+                                    <h4 class="text-danger" style="font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-square-minus"></i> Dönüşecek Meslekler</h4>
+                                    <ul>
+                                        <li><strong>Veri Giriş Elemanı:</strong> AI veriyi otomatik işlediği için rolü azalacak.</li>
+                                        <li><strong>Dosyalama/Arşiv Memuru:</strong> Akıllı arşivleme sistemlerine evrilecek.</li>
+                                        <li><strong>Manuel Çevirmenlik:</strong> AI çevirisiyle yerelleştirme uzmanlığına kayacak.</li>
+                                        <li><strong>Basit Montaj İşçisi:</strong> Otomasyon ve robotik kollarla dönüşecek.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: PEDAGOGY & BOUNDARIES [NEW] -->
+            <section class="slide" id="slide-6" data-index="6">
+                <div class="slide-content grid-2">
+                    <div class="text-content">
+                        <span class="badge">Pedagojik Entegrasyon</span>
+                        <h2 class="slide-title">Yapay Zekanın Eğitimdeki Rolü ve Sınırlar</h2>
+                        <p class="normal-text">
+                            Yapay zekayı sınıfa sokarken onu bir "kopya aracı" değil, bir <strong>"öğrenme ortağı"</strong> haline getirmeliyiz.
+                        </p>
+                        <ul class="comparison-list">
+                            <li><i class="fa-solid fa-check text-success"></i> <strong>Öğretmen Kolaylaştırıcıdır:</strong> AI evrak işlerini hafifletir; öğretmen empati, motivasyon ve rehberliğe odaklanır.</li>
+                            <li><i class="fa-solid fa-check text-success"></i> <strong>Kritik Düşünme Ön Plandadır:</strong> Öğrenciler yapay zekanın yanıtlarını doğrudan kabul etmeyip doğruluğunu araştırmayı öğrenmelidir.</li>
+                            <li><i class="fa-solid fa-check text-success"></i> <strong>Fırsat Eşitliği:</strong> Her öğrencinin evinde 7/24 birebir çalışan özel bir öğretmeni olması gibi bir imkan sağlar.</li>
+                        </ul>
+                    </div>
+                    <div class="visual-content flex-center">
+                        <div class="callout-box glass" style="border-color: rgba(168, 85, 247, 0.3);">
+                            <div class="callout-icon" style="color: var(--color-purple);"><i class="fa-solid fa-chalkboard-user"></i></div>
+                            <h3>Pedagojik Altın Sınır</h3>
+                            <p>"Yapay zeka harika bir uşaktır ama çok tehlikeli bir efendidir. Sınıfın lideri ve son karar vericisi her zaman öğretmen olmalıdır."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: GOOGLE AI STUDIO INTRO [OLD SLIDE 2] -->
+            <section class="slide" id="slide-7" data-index="7">
+                <div class="slide-content grid-2">
+                    <div class="text-content">
+                        <span class="badge">Tanım ve Kıyaslama</span>
+                        <h2 class="slide-title">Google AI Studio Nedir?</h2>
+                        <p class="normal-text">
+                            Google AI Studio, Google'ın en güçlü yapay zeka modeli **Gemini** ile doğrudan deney yapabileceğiniz web tabanlı bir <strong>"atölyedir"</strong>.
+                        </p>
+                        
+                        <!-- Analogy Card -->
+                        <div class="analogy-card glass">
+                            <div class="analogy-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <div>
+                                <h4>Mutfak Analojisi 🍳</h4>
+                                <p><strong>Gemini Uygulaması (gemini.google.com):</strong> Restorana gidip hazır menüden yemek sipariş etmektir.</p>
+                                <p><strong>Google AI Studio:</strong> Kendi mutfağınıza girip malzemeleri, baharatları ve pişirme süresini tamamen kendiniz ayarlayarak özel bir tarif oluşturmaktır.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-content flex-center">
+                        <div class="comparison-box glass">
+                            <h3>Neden AI Studio?</h3>
+                            <ul class="comparison-list">
+                                <li><i class="fa-solid fa-check text-success"></i> Kalıcı Sistem Yönergeleri (Rol tanımlama)</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Yaratıcılık derecesini ayarlama</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Google Arama ile doğrulama (Grounding)</li>
+                                <li><i class="fa-solid fa-check text-success"></i> %100 Ücretsiz test katmanı</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: KEY FEATURES [OLD SLIDE 3] -->
+            <section class="slide" id="slide-8" data-index="8">
+                <div class="slide-content">
+                    <div class="text-center-header">
+                        <span class="badge">Süper Güçler</span>
+                        <h2 class="slide-title text-center">Öğretmenler İçin Temel Özellikler</h2>
+                        <p class="subtitle text-center">AI Studio'yu sınıfınız için bir yardımcı haline getiren 4 temel ayar:</p>
+                    </div>
+                    <div class="grid-4 mt-4">
+                        <div class="feature-card glass hover-up">
+                            <div class="card-icon cyan"><i class="fa-solid fa-id-card"></i></div>
+                            <h3>Sistem Yönergeleri</h3>
+                            <p class="feature-summary">Yapay zekaya kalıcı bir kimlik, kurallar ve üslup verir.</p>
+                            <ul class="feature-details-list">
+                                <li><strong>Öğretmen Rolü:</strong> "Sen 5. sınıf fen öğretmenisin..."</li>
+                                <li><strong>Sınır Çizme:</strong> "Öğrenciye cevabı doğrudan söyleme."</li>
+                                <li><strong>Kalıcılık:</strong> Uzun sohbetlerde bile karakter korunur.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card glass hover-up">
+                            <div class="card-icon purple"><i class="fa-solid fa-temperature-half"></i></div>
+                            <h3>Sıcaklık (Temperature)</h3>
+                            <p class="feature-summary">Yapay zekanın yaratıcılık ve esneklik derecesini ayarlar.</p>
+                            <ul class="feature-details-list">
+                                <li><strong>Düşük (0.0 - 0.2):</strong> Kesin gerçekler ve sınav testleri.</li>
+                                <li><strong>Yüksek (1.0 - 1.5):</strong> Yaratıcı hikaye ve masal yazımı.</li>
+                                <li><strong>Ölçek:</strong> 0 ile 2.0 arasında değerler alır.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card glass hover-up">
+                            <div class="card-icon pink"><i class="fa-solid fa-photo-film"></i></div>
+                            <h3>Çoklu Mod (Multimodal)</h3>
+                            <p class="feature-summary">Metin dışındaki görsel, ses ve PDF dosyalarını işler.</p>
+                            <ul class="feature-details-list">
+                                <li><strong>Görsel Analizi:</strong> Grafik, harita ve tablo okutma.</li>
+                                <li><strong>Büyük PDF Belgeleri:</strong> MEB kazanım kılavuzlarını tarama.</li>
+                                <li><strong>Ses Dosyaları:</strong> Ders dinleme seslerini metne dökme.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card glass hover-up">
+                            <div class="card-icon blue"><i class="fa-solid fa-globe"></i></div>
+                            <h3>Google Arama (Grounding)</h3>
+                            <p class="feature-summary">Yapay zekayı web aramasıyla temellendirip günceller.</p>
+                            <ul class="feature-details-list">
+                                <li><strong>Sıfır Halüsinasyon:</strong> Bilgi uydurma riskini en aza indirir.</li>
+                                <li><strong>Kaynak Bağlantıları:</strong> Bilgi alınan sitelerin linkini ekler.</li>
+                                <li><strong>Hızlı Erişim:</strong> En son MEB sınav duyurularını bulur.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: PROMPT TYPES [OLD SLIDE 4] -->
+            <section class="slide" id="slide-9" data-index="9">
+                <div class="slide-content grid-2">
+                    <div class="text-content">
+                        <span class="badge">İstem Çeşitleri</span>
+                        <h2 class="slide-title">İhtiyacınıza Göre 3 Farklı İstem (Prompt) Türü</h2>
+                        <p class="normal-text">
+                            Google AI Studio'da çalışmalarınızı yaparken amacınıza en uygun arayüzü seçebilirsiniz.
+                        </p>
+                        
+                        <div class="accordion">
+                            <div class="accordion-item glass active" onclick="toggleAccordion(0)">
+                                <div class="accordion-title">
+                                    <span><i class="fa-solid fa-comments"></i> 1. Sohbet İstemleri (Chat Prompts)</span>
+                                    <i class="fa-solid fa-chevron-down arrow"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Karşılıklı diyalog ve geçmiş hafızası gerektiren durumlar için idealdir. Sokratik soru-cevap asistanları, dil konuşma pratikleri veya rehberlik robotları için kullanılır.</p>
+                                    <p class="accordion-example"><strong>💡 Sınıf İçi Örnek:</strong> Öğrencilerin "Marie Curie" rolündeki chatbot ile röportaj yaparak radyoaktivite konusunu keşfetmesi.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item glass" onclick="toggleAccordion(1)">
+                                <div class="accordion-title">
+                                    <span><i class="fa-solid fa-file-lines"></i> 2. Serbest İstemler (Freeform Prompts)</span>
+                                    <i class="fa-solid fa-chevron-down arrow"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Tek yönlü ve büyük hacimli metin üretimleri için kullanılır. Giriş kısmına büyük bir dosya veya konu özetini yapıştırıp tek seferde ders planı ya da özet çıkarmak için en uygundur.</p>
+                                    <p class="accordion-example"><strong>💡 Sınıf İçi Örnek:</strong> 5 sayfalık bir makaleden 5. sınıf seviyesine uygun 10 maddelik bir okuma özeti veya MEB formatında 40 dakikalık ders planı yazdırma.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item glass" onclick="toggleAccordion(2)">
+                                <div class="accordion-title">
+                                    <span><i class="fa-solid fa-table"></i> 3. Yapılandırılmış İstemler (Structured Prompts)</span>
+                                    <i class="fa-solid fa-chevron-down arrow"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Yapay zekaya örnek girdi-çıktılar (Few-shot) vererek belirli bir düzende çalıştırdığımız yapıdır. AI'a bir şablon veririz ve çıktıların hep bu şablonda kalmasını sağlarız.</p>
+                                    <p class="accordion-example"><strong>💡 Sınıf İçi Örnek:</strong> "Girdi: Kazanım -> Çıktı: LGS Tarzı Soru + Çözüm" şeklinde örnekler vererek otomatik soru hazırlama motoru oluşturma.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-content flex-center">
+                        <div class="image-wrapper glass">
+                            <img src="images/prompting_concept.png" alt="Prompting Konsept Resmi" id="prompt-concept-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: INTERACTIVE SIMULATOR [OLD SLIDE 5] -->
+            <section class="slide" id="slide-10" data-index="10">
+                <div class="slide-content">
+                    <div class="text-center-header">
+                        <span class="badge">Etkileşimli Atölye</span>
+                        <h2 class="slide-title text-center">Hadi Deneyelim! 🛠️</h2>
+                        <p class="subtitle text-center">Aşağıdan bir öğretmen rolü seçin veya kendi yönergenizi yazın, ardından yapay zekanın yanıtını test edin!</p>
+                    </div>
+                    
+                    <!-- Simülatör Arayüzü -->
+                    <div class="simulator-container glass mt-3">
+                        <div class="sim-sidebar">
+                            <h4>MEB Ders Şablonları</h4>
+                            <button class="sim-preset-btn active" onclick="loadPreset('matematik')">
+                                <i class="fa-solid fa-calculator"></i> Matematik Koçu
+                            </button>
+                            <button class="sim-preset-btn" onclick="loadPreset('turkce')">
+                                <i class="fa-solid fa-book"></i> Türkçe Öğretmeni
+                            </button>
+                            <button class="sim-preset-btn" onclick="loadPreset('fen')">
+                                <i class="fa-solid fa-flask"></i> Fen Bilimleri
+                            </button>
+                            <button class="sim-preset-btn" onclick="loadPreset('sosyal')">
+                                <i class="fa-solid fa-earth-americas"></i> Sosyal Bilgiler
+                            </button>
+                            <button class="sim-preset-btn" onclick="loadPreset('ingilizce')">
+                                <i class="fa-solid fa-language"></i> İngilizce Asistanı
+                            </button>
+                            <button class="sim-preset-btn" onclick="loadPreset('dinkulturu')">
+                                <i class="fa-solid fa-hands-praying"></i> Din Kültürü
+                            </button>
+                            <button class="sim-preset-btn" onclick="loadPreset('bilisim')">
+                                <i class="fa-solid fa-code"></i> Bilişim & Kodlama
+                            </button>
+                            
+                            <hr class="sim-divider">
+                            
+                            <div class="sim-setting">
+                                <label for="temp-slider">Sıcaklık (Temperature): <span id="temp-val">0.2</span></label>
+                                <input type="range" id="temp-slider" min="0" max="2" step="0.1" value="0.2" oninput="updateTempVal(this.value)">
+                            </div>
+                        </div>
+                        <div class="sim-main">
+                            <div class="sim-section">
+                                <label class="sim-label"><i class="fa-solid fa-gears"></i> System Instructions (Sistem Yönergesi)</label>
+                                <textarea id="sim-instructions" class="sim-textarea" placeholder="Yapay zekanın kimliğini buraya yazın..."></textarea>
+                            </div>
+                            
+                            <div class="sim-section grid-2-gap">
+                                <div>
+                                    <label class="sim-label"><i class="fa-solid fa-keyboard"></i> Kullanıcı Sorusu (User Input)</label>
+                                    <input type="text" id="sim-user-input" class="sim-input" placeholder="Yapay zekaya ne sormak istersiniz?">
+                                </div>
+                                <div class="flex-bottom">
+                                    <button class="btn btn-accent btn-full" onclick="runSimulator()">
+                                        <i class="fa-solid fa-play"></i> İstemi Çalıştır (Run)
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="sim-output-box">
+                                <div class="sim-output-header">
+                                    <span><i class="fa-solid fa-robot"></i> Yapay Zeka Yanıtı (Gemini Output)</span>
+                                    <span class="status-badge" id="sim-status">Hazır</span>
+                                </div>
+                                <div class="sim-output-content" id="sim-output-text">
+                                    Yukarıdaki parametreleri ayarlayıp "İstemi Çalıştır" butonuna basarak simülasyonu başlatabilirsiniz.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 11: PRIVACY & RESPONSIBILITY [OLD SLIDE 6] -->
+            <section class="slide" id="slide-11" data-index="11">
+                <div class="slide-content grid-2">
+                    <div class="text-content">
+                        <span class="badge">Sorumlu Yapay Zeka</span>
+                        <h2 class="slide-title">Güvenlik ve Gizlilik İpuçları 🔒</h2>
+                        <p class="normal-text">
+                            Yapay zekayı sınıflarımıza entegre ederken öğrencilerimizin verilerini ve etik kuralları korumak birinci önceliğimizdir.
+                        </p>
+                        
+                        <div class="safety-grid">
+                            <div class="safety-item glass" onclick="showSafetyDetail('gizlilik', this)">
+                                <div class="safety-icon text-warning"><i class="fa-solid fa-user-shield"></i></div>
+                                <div>
+                                    <h4>Öğrenci Gizliliği</h4>
+                                    <p>Sisteme asla öğrencilerin isimlerini, karnelerini veya kişisel fotoğraflarını yüklemeyin. Verileri her zaman anonimleştirin.</p>
+                                </div>
+                            </div>
+                            <div class="safety-item glass" onclick="showSafetyDetail('halusinasyon', this)">
+                                <div class="safety-icon text-danger"><i class="fa-solid fa-circle-exclamation"></i></div>
+                                <div>
+                                    <h4>Halüsinasyonlara Dikkat</h4>
+                                    <p>Yapay zeka bazen yanlış bilgileri çok ikna edici şekilde sunabilir. Ders materyalini sınıfa götürmeden önce mutlaka kendiniz doğrulayın.</p>
+                                </div>
+                            </div>
+                            <div class="safety-item glass" onclick="showSafetyDetail('kurumsal', this)">
+                                <div class="safety-icon text-info"><i class="fa-solid fa-school"></i></div>
+                                <div>
+                                    <h4>Kurumsal Hesap Tercihi</h4>
+                                    <p>Okulunuzun sağladığı <strong>Google Workspace for Education</strong> hesabı ile giriş yapmak veri gizliliği standartları açısından her zaman daha güvenlidir.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-content flex-center">
+                        <div class="callout-box glass" id="safety-callout">
+                            <div class="callout-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h3>Altın Kural</h3>
+                            <p class="callout-text">"Yapay zekaya, okul panosuna asamayacağınız hiçbir öğrenci verisini yüklemeyin!"</p>
+                            <span class="detail-tip">Detaylı MEB rehberini görmek için soldaki başlıklardan birine tıklayabilirsiniz.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 12: HOW TO GET STARTED [OLD SLIDE 7] -->
+            <section class="slide" id="slide-12" data-index="12">
+                <div class="slide-content grid-2">
+                    <div class="text-content">
+                        <span class="badge">Başlangıç Adımları</span>
+                        <h2 class="slide-title">Google AI Studio'ya Nasıl Başlanır?</h2>
+                        <p class="normal-text">Sadece 3 basit adımda kendi yapay zeka deney atölyenizi kurun.</p>
+                        
+                        <div class="steps-list">
+                            <div class="step-list-item glass active" onclick="showStepGuide('step1', this)">
+                                <div class="step-badge">1</div>
+                                <div>
+                                    <h4>Web Sitesine Gidin</h4>
+                                    <p>Geliştirici paneline ulaşmak için resmi adresi tarayıcınızda açın.</p>
+                                </div>
+                            </div>
+                            <div class="step-list-item glass" onclick="showStepGuide('step2', this)">
+                                <div class="step-badge">2</div>
+                                <div>
+                                    <h4>Google Hesabıyla Giriş</h4>
+                                    <p>Kişisel veya kurumsal Google hesabınızla saniyeler içinde oturum açın.</p>
+                                </div>
+                            </div>
+                            <div class="step-list-item glass" onclick="showStepGuide('step3', this)">
+                                <div class="step-badge">3</div>
+                                <div>
+                                    <h4>İlk Projeyi Başlatın</h4>
+                                    <p>Yönergenizi girin, modelinizi seçin ve ilk kodsuz robotunuzu test edin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="visual-content flex-center">
+                        <!-- Simulated Browser Window -->
+                        <div class="browser-mockup glass" id="browser-screen">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="browser-address-bar" id="browser-url">
+                                    https://aistudio.google.com
+                                </div>
+                            </div>
+                            <div class="browser-content" id="browser-screen-content">
+                                <!-- Dynamic mockup page loaded by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 13: INTERACTIVE QUIZ [NEW] -->
+            <section class="slide" id="slide-13" data-index="13">
+                <div class="slide-content">
+                    <div class="text-center-header">
+                        <span class="badge">Ölçme ve Değerlendirme</span>
+                        <h2 class="slide-title text-center">Öğrenme Kontrolü (Quiz)</h2>
+                        <p class="subtitle text-center">Sunumda edindiğimiz bilgileri eğlenceli 3 soruyla test edelim!</p>
+                    </div>
+                    
+                    <div class="quiz-container glass mt-4" id="quiz-box">
+                        <!-- Question content will be dynamically generated by JS -->
+                        <div id="quiz-question-area">
+                            <div class="quiz-progress" id="quiz-prog">Soru 1 / 3</div>
+                            <div class="quiz-question" id="quiz-q-text">Yapay zeka modellerinin bazen doğru gibi görünen tamamen uydurma bilgiler üretmesine ne ad verilir?</div>
+                            <div class="quiz-options" id="quiz-opt-grid">
+                                <!-- Options go here -->
+                            </div>
+                            <div class="quiz-feedback-box" id="quiz-feed" style="display:none;"></div>
+                        </div>
+                        <div id="quiz-result-area" style="display:none; text-align: center; padding: 20px;">
+                            <div class="quiz-result-icon"><i class="fa-solid fa-trophy"></i></div>
+                            <h3>Tebrikler, Testi Tamamladınız!</h3>
+                            <p id="quiz-score-text"></p>
+                            
+                            <!-- Score Submission Form -->
+                            <div id="quiz-submit-form" class="leaderboard-submit-box mt-3" style="max-width: 450px; margin: 0 auto;">
+                                <p class="text-secondary mb-2" style="font-size: 0.9rem;">Adınızı yazarak skorunuzu liderlik tablosuna kaydedin:</p>
+                                <div style="display: flex; gap: 10px; margin-bottom: 20px; justify-content: center;">
+                                    <input type="text" id="quiz-username" placeholder="Adınız Soyadınız" class="leaderboard-input" maxlength="25">
+                                    <button class="btn btn-accent" onclick="submitScore()">Skoru Gönder</button>
+                                </div>
+                            </div>
+
+                            <!-- Leaderboard Display -->
+                            <div id="leaderboard-area" class="leaderboard-container mt-4" style="display: none; max-width: 500px; margin: 20px auto 0 auto;">
+                                <h4 class="mb-3"><i class="fa-solid fa-ranking-star" style="color: var(--color-accent); margin-right: 6px;"></i> En Yüksek Skorlar</h4>
+                                <div class="leaderboard-table-wrapper">
+                                    <table class="leaderboard-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Sıra</th>
+                                                <th>Kullanıcı</th>
+                                                <th>Skor</th>
+                                                <th>Tarih</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="leaderboard-tbody">
+                                            <!-- Dynamically loaded from API -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 25px;">
+                                <button class="btn btn-primary" onclick="restartQuiz()">
+                                    <i class="fa-solid fa-arrow-rotate-left"></i> Testi Yeniden Başlat
+                                </button>
+                                <button class="btn btn-secondary" onclick="goToStart()" style="margin-left: 10px;">
+                                    <i class="fa-solid fa-house"></i> Eğitimin Başına Dön
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 14: BIBLIOGRAPHY [NEW] -->
+            <section class="slide" id="slide-14" data-index="14">
+                <div class="slide-content">
+                    <div class="text-center-header">
+                        <span class="badge">Kaynakça ve Güvenli Kaynaklar</span>
+                        <h2 class="slide-title text-center">Kaynakça</h2>
+                        <p class="subtitle text-center">Eğitim materyalinin oluşturulmasında yararlanılan akademik ve kurumsal kaynaklar:</p>
+                    </div>
+                    <div class="grid-2 mt-4" style="align-items: start; gap: 30px;">
+                        <div class="citation-column">
+                            <div class="citation-card glass">
+                                <div class="citation-num">1</div>
+                                <div>
+                                    <h5>Google AI Developer Portal</h5>
+                                    <p>Official instructions and technical specifications of Gemini models. <a href="https://ai.google.dev" target="_blank" class="accent-link">ai.google.dev</a></p>
+                                </div>
+                            </div>
+                            <div class="citation-card glass mt-3">
+                                <div class="citation-num">2</div>
+                                <div>
+                                    <h5>UNESCO AI in Education Guideline (2021)</h5>
+                                    <p>AI and Education: Guidance for Policy-makers. Framework rules on safety, values and pedagogy.</p>
+                                </div>
+                            </div>
+                            <div class="citation-card glass mt-3">
+                                <div class="citation-num">3</div>
+                                <div>
+                                    <h5>MEB Yapay Zeka Raporları</h5>
+                                    <p>Milli Eğitim Bakanlığı Fatih Projesi ve Eğitimde Yapay Zeka Uygulamaları Çerçeve Raporu.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="citation-column">
+                            <div class="citation-card glass">
+                                <div class="citation-num">4</div>
+                                <div>
+                                    <h5>MIT RAISE Guidelines</h5>
+                                    <p>Responsible AI for Social Empowerment and Education pedagogical training guides.</p>
+                                </div>
+                            </div>
+                            <div class="citation-card glass mt-3">
+                                <div class="citation-num">5</div>
+                                <div>
+                                    <h5>Google DeepMind Research Publications</h5>
+                                    <p>"Highly accurate protein structure prediction with AlphaFold" Nature Journal (2020).</p>
+                                </div>
+                            </div>
+                            <div class="citation-card glass mt-3">
+                                <div class="citation-num">6</div>
+                                <div>
+                                    <h5>Grow with Google Training</h5>
+                                    <p>Generative AI for Educators Professional Development Course materials.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 15: CONCLUSION [OLD SLIDE 8] -->
+            <section class="slide" id="slide-15" data-index="15">
+                <div class="slide-content text-center">
+                    <span class="badge">Geleceğe Doğru</span>
+                    <h2 class="slide-title text-center">Geleceğin Sınıfını Birlikte Tasarlayalım! 🚀</h2>
+                    <p class="lead-text max-width-800 text-center">
+                        "Yapay zeka hiçbir zaman öğretmenlerin yerini almayacak; ancak yapay zekayı kullanan öğretmenler, kullanmayan meslektaşlarının yerini alacak."
+                    </p>
+                    
+
+                    <div class="final-buttons mt-4">
+                        <a href="https://aistudio.google.com" target="_blank" class="btn btn-primary btn-large">
+                            <i class="fa-solid fa-rocket"></i> Hemen AI Studio'ya Git
+                        </a>
+                        <button onclick="switchMode('handbook')" class="btn btn-accent btn-large">
+                            <i class="fa-solid fa-book-open"></i> Eğitim Rehberi'ni Aç
+                        </button>
+                        <button onclick="downloadResourcesPDF()" class="btn btn-secondary btn-large">
+                            <i class="fa-solid fa-file-pdf"></i> Kaynakçayı PDF Olarak İndir
+                        </button>
+                        <button onclick="goToStart()" class="btn btn-secondary btn-large" style="border-color: var(--color-primary); color: var(--color-accent);">
+                            <i class="fa-solid fa-arrow-rotate-left"></i> Eğitimin Başına Dön
+                        </button>
+                    </div>
+                    
+                    <p class="sincere-note mt-4 text-center">
+                        Katılımınız ve sınıflarımıza kattığınız tüm güzellikler için teşekkür ederiz! ❤️
+                    </p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- HANDBOOK CONTAINER -->
+        <div class="handbook-wrapper" id="handbook-wrapper" style="display: none;">
+            <div class="handbook-sidebar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="handbook-search" placeholder="Konu veya anahtar kelime ara..." oninput="filterHandbook()">
+                </div>
+                <div class="handbook-menu" id="handbook-menu">
+                    <!-- Dynamic modules list loaded from JS -->
+                </div>
+            </div>
+            <div class="handbook-content-pane">
+                <div class="handbook-header-info">
+                    <h3 id="handbook-module-title">Modül Başlığı</h3>
+                    <p id="handbook-module-desc" class="text-secondary">Modül açıklaması...</p>
+                </div>
+                <div id="handbook-details">
+                    <!-- Dynamic subtopic contents loaded from JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER: CONTROLS & NAVIGATION -->
+        <footer class="presentation-footer">
+            <div class="nav-controls">
+                <button class="nav-btn" id="prev-btn" onclick="prevSlide()" aria-label="Önceki Slayt">
+                    <i class="fa-solid fa-chevron-left"></i> Geri
+                </button>
+                <button class="nav-btn" id="restart-btn" onclick="goToStart()" aria-label="Eğitimin Başına Dön">
+                    <i class="fa-solid fa-arrow-rotate-left"></i> Başa Dön
+                </button>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar" style="width: 6.66%;"></div>
+                </div>
+                <button class="nav-btn" id="next-btn" onclick="nextSlide()" aria-label="Sonraki Slayt">
+                    İleri <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </footer>
+
+        <!-- FLOATING BACK TO TOP BUTTON -->
+        <button id="back-to-top-btn" onclick="scrollToTop()" class="back-to-top" aria-label="Yukarı Çık">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+    </main>
+
+    <!-- Script File -->
+    <script src="handbook_data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
