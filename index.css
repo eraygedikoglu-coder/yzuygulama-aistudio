@@ -547,10 +547,16 @@ body {
 
 .comparison-list li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 14px;
     font-size: 1.1rem;
     font-weight: 500;
+}
+
+.comparison-list li strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-primary);
 }
 
 .text-success {
