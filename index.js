@@ -2,7 +2,7 @@
 // SLIDE NAVIGATION LOGIC
 // ==========================================================================
 let currentSlide = 1;
-const totalSlides = 15;
+const totalSlides = 17;
 
 function updateSlide() {
     // Hide Back to Top button on slide change
@@ -41,16 +41,16 @@ function updateSlide() {
         nextBtn.innerHTML = 'İleri <i class="fa-solid fa-chevron-right"></i>';
     }
 
-    // Initialize slide 12 interactive mockup when loaded
-    if (currentSlide === 12) {
+    // Initialize slide 14 interactive mockup when loaded
+    if (currentSlide === 14) {
         const firstItem = document.querySelector('.steps-list .step-list-item:nth-child(1)');
         if (firstItem) {
             showStepGuide('step1', firstItem);
         }
     }
 
-    // Initialize Slide 13 Quiz when active
-    if (currentSlide === 13) {
+    // Initialize Slide 15 Quiz when active
+    if (currentSlide === 15) {
         initQuiz();
     }
 }

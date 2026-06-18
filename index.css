@@ -2551,6 +2551,39 @@ body {
     }
 }
 
+/* ==========================================================================
+   NEURAL NETWORK NODE STYLES (SLIDE 8)
+   ========================================================================== */
+.nn-node {
+    animation: nodePulse 2s infinite alternate;
+}
+
+.nn-node.input {
+    background-color: var(--color-primary) !important;
+    color: var(--color-primary-glow) !important;
+}
+
+.nn-node.hidden {
+    background-color: var(--color-accent) !important;
+    color: var(--color-accent-glow) !important;
+}
+
+.nn-node.output {
+    background-color: var(--color-purple) !important;
+    color: rgba(168, 85, 247, 0.4) !important;
+}
+
+@keyframes nodePulse {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 4px currentColor;
+    }
+    100% {
+        transform: scale(1.15);
+        box-shadow: 0 0 12px currentColor;
+    }
+}
+
 
 
 

@@ -45,7 +45,7 @@
                     <i class="fa-solid fa-arrow-rotate-left"></i> Başa Dön
                 </button>
             </div>
-            <div class="slide-indicator" id="slide-number">1 / 15</div>
+            <div class="slide-indicator" id="slide-number">1 / 17</div>
         </header>
 
         <!-- SLIDES CONTAINER -->
@@ -297,7 +297,108 @@
             </section>
 
             <!-- SLIDE 7: GOOGLE AI STUDIO INTRO [OLD SLIDE 2] -->
+                        <!-- SLIDE 7: MACHINE LEARNING [NEW] -->
             <section class="slide" id="slide-7" data-index="7">
+                <div class="slide-content grid-2">
+                    <div class="text-content">
+                        <span class="badge">Veriden Öğrenme</span>
+                        <h2 class="slide-title">Makine Öğrenmesi Nedir?</h2>
+                        <p class="normal-text">
+                            Makine Öğrenmesi (Machine Learning), bilgisayarların açıkça programlanmadan, verilerden örüntüler çıkararak kendi kendilerine öğrenmesini sağlayan bir yapay zeka alt dalıdır.
+                        </p>
+                        
+                        <!-- Traditional vs ML comparison card -->
+                        <div class="analogy-card glass">
+                            <div class="analogy-icon"><i class="fa-solid fa-code-compare"></i></div>
+                            <div>
+                                <h4>Geleneksel Programlama vs Makine Öğrenmesi</h4>
+                                <p><strong>Geleneksel:</strong> Veri + Kurallar &rarr; Bilgisayar &rarr; Sonuç</p>
+                                <p><strong>Makine Öğrenmesi:</strong> Veri + Sonuçlar &rarr; Bilgisayar &rarr; Kurallar (Model)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-content flex-center">
+                        <div class="comparison-box glass" style="width: 100%;">
+                            <h3 style="margin-bottom: 15px;"><i class="fa-solid fa-graduation-cap" style="color: var(--color-accent); margin-right: 8px;"></i> ML Öğrenme Yöntemleri</h3>
+                            <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem;">
+                                <div style="background: rgba(255, 255, 255, 0.02); padding: 10px 14px; border-radius: var(--border-radius-sm); border-left: 3px solid var(--color-primary);">
+                                    <strong>1. Gözetimli Öğrenme (Supervised):</strong> Etiketli verilerle eğitim (örn: "kedi" etiketli resimlerle kedi tanıma).
+                                </div>
+                                <div style="background: rgba(255, 255, 255, 0.02); padding: 10px 14px; border-radius: var(--border-radius-sm); border-left: 3px solid var(--color-accent);">
+                                    <strong>2. Gözetimsiz Öğrenme (Unsupervised):</strong> Etiketsiz verilerden örüntü gruplama (örn: müşteri segmentasyonu).
+                                </div>
+                                <div style="background: rgba(255, 255, 255, 0.02); padding: 10px 14px; border-radius: var(--border-radius-sm); border-left: 3px solid var(--color-purple);">
+                                    <strong>3. Pekiştirmeli Öğrenme (Reinforcement):</strong> Ödül/ceza ile deneme-yanılma (örn: satranç oynayan yapay zeka).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: DEEP LEARNING [NEW] -->
+            <section class="slide" id="slide-8" data-index="8">
+                <div class="slide-content grid-2">
+                    <div class="text-content">
+                        <span class="badge">Yapay Sinir Ağları</span>
+                        <h2 class="slide-title">Derin Öğrenme Nedir?</h2>
+                        <p class="normal-text">
+                            Derin Öğrenme (Deep Learning), insan beyninin nöron yapısından esinlenen **Yapay Sinir Ağları (Artificial Neural Networks)** kullanarak karmaşık verileri analiz eden, makine öğrenmesinin gelişmiş bir alt kümesidir.
+                        </p>
+                        <div class="feature-bullets">
+                            <div class="bullet-item">
+                                <i class="fa-solid fa-circle-nodes bullet-icon"></i>
+                                <span><strong>Kendi Kendine Özellik Çıkarma:</strong> Ham verinin içindeki önemli özellikleri (kenarlar, dokular, şekiller) insan müdahalesi olmadan kendi kendine keşfeder.</span>
+                            </div>
+                            <div class="bullet-item">
+                                <i class="fa-solid fa-database bullet-icon"></i>
+                                <span><strong>Büyük Veri ve Güç:</strong> Ne kadar çok veriyle eğitilirse performansı o kadar artar; çalışması için GPU/TPU gücü gerekir.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-content flex-center">
+                        <div class="comparison-box glass" style="width: 100%; text-align: center;">
+                            <h3 style="margin-bottom: 12px;">Yapay Sinir Ağı Yapısı</h3>
+                            <!-- Layer visualization diagram -->
+                            <div style="display: flex; justify-content: space-around; align-items: center; margin: 15px 0; padding: 10px; background: rgba(0,0,0,0.2); border-radius: var(--border-radius-sm);">
+                                <div style="display: flex; flex-direction: column; gap: 8px;">
+                                    <span style="font-size: 0.75rem; color: var(--text-secondary);">Giriş</span>
+                                    <div class="nn-node input" style="width: 14px; height: 14px; border-radius: 50%; margin: 0 auto;"></div>
+                                    <div class="nn-node input" style="width: 14px; height: 14px; border-radius: 50%; margin: 0 auto;"></div>
+                                    <div class="nn-node input" style="width: 14px; height: 14px; border-radius: 50%; margin: 0 auto;"></div>
+                                </div>
+                                <div style="font-size: 1rem; color: var(--text-muted);">&rarr;</div>
+                                <div style="display: flex; flex-direction: column; gap: 8px;">
+                                    <span style="font-size: 0.75rem; color: var(--text-secondary);">Gizli Katmanlar</span>
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <div class="nn-node hidden" style="width: 12px; height: 12px; border-radius: 50%;"></div>
+                                        <div class="nn-node hidden" style="width: 12px; height: 12px; border-radius: 50%;"></div>
+                                    </div>
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <div class="nn-node hidden" style="width: 12px; height: 12px; border-radius: 50%;"></div>
+                                        <div class="nn-node hidden" style="width: 12px; height: 12px; border-radius: 50%;"></div>
+                                    </div>
+                                    <div style="display: flex; gap: 8px; justify-content: center;">
+                                        <div class="nn-node hidden" style="width: 12px; height: 12px; border-radius: 50%;"></div>
+                                        <div class="nn-node hidden" style="width: 12px; height: 12px; border-radius: 50%;"></div>
+                                    </div>
+                                </div>
+                                <div style="font-size: 1rem; color: var(--text-muted);">&rarr;</div>
+                                <div style="display: flex; flex-direction: column; gap: 8px;">
+                                    <span style="font-size: 0.75rem; color: var(--text-secondary);">Çıkış</span>
+                                    <div class="nn-node output" style="width: 14px; height: 14px; border-radius: 50%; margin: 0 auto;"></div>
+                                    <div class="nn-node output" style="width: 14px; height: 14px; border-radius: 50%; margin: 0 auto;"></div>
+                                </div>
+                            </div>
+                            <p class="text-secondary" style="font-size: 0.85rem; line-height: 1.4; margin-top: 10px; text-align: left;">
+                                <strong>Uygulama Alanları:</strong> Gemini gibi Büyük Dil Modelleri (LLM), gelişmiş konuşma tanıma, görsel üretim (Imagen) ve otonom sürüş sistemleri tamamen derin öğrenmeye dayanır.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-9" data-index="9">
                 <div class="slide-content grid-2">
                     <div class="text-content">
                         <span class="badge">Tanım ve Kıyaslama</span>
@@ -331,7 +432,7 @@
             </section>
 
             <!-- SLIDE 8: KEY FEATURES [OLD SLIDE 3] -->
-            <section class="slide" id="slide-8" data-index="8">
+            <section class="slide" id="slide-10" data-index="10">
                 <div class="slide-content">
                     <div class="text-center-header">
                         <span class="badge">Süper Güçler</span>
@@ -384,7 +485,7 @@
             </section>
 
             <!-- SLIDE 9: PROMPT TYPES [OLD SLIDE 4] -->
-            <section class="slide" id="slide-9" data-index="9">
+            <section class="slide" id="slide-11" data-index="11">
                 <div class="slide-content grid-2">
                     <div class="text-content">
                         <span class="badge">İstem Çeşitleri</span>
@@ -435,7 +536,7 @@
             </section>
 
             <!-- SLIDE 10: INTERACTIVE SIMULATOR [OLD SLIDE 5] -->
-            <section class="slide" id="slide-10" data-index="10">
+            <section class="slide" id="slide-12" data-index="12">
                 <div class="slide-content">
                     <div class="text-center-header">
                         <span class="badge">Etkileşimli Atölye</span>
@@ -509,7 +610,7 @@
             </section>
 
             <!-- SLIDE 11: PRIVACY & RESPONSIBILITY [OLD SLIDE 6] -->
-            <section class="slide" id="slide-11" data-index="11">
+            <section class="slide" id="slide-13" data-index="13">
                 <div class="slide-content grid-2">
                     <div class="text-content">
                         <span class="badge">Sorumlu Yapay Zeka</span>
@@ -554,7 +655,7 @@
             </section>
 
             <!-- SLIDE 12: HOW TO GET STARTED [OLD SLIDE 7] -->
-            <section class="slide" id="slide-12" data-index="12">
+            <section class="slide" id="slide-14" data-index="14">
                 <div class="slide-content grid-2">
                     <div class="text-content">
                         <span class="badge">Başlangıç Adımları</span>
@@ -608,7 +709,7 @@
             </section>
 
             <!-- SLIDE 13: INTERACTIVE QUIZ [NEW] -->
-            <section class="slide" id="slide-13" data-index="13">
+            <section class="slide" id="slide-15" data-index="15">
                 <div class="slide-content">
                     <div class="text-center-header">
                         <span class="badge">Ölçme ve Değerlendirme</span>
@@ -674,7 +775,7 @@
             </section>
 
             <!-- SLIDE 14: BIBLIOGRAPHY [NEW] -->
-            <section class="slide" id="slide-14" data-index="14">
+            <section class="slide" id="slide-16" data-index="16">
                 <div class="slide-content">
                     <div class="text-center-header">
                         <span class="badge">Kaynakça ve Güvenli Kaynaklar</span>
@@ -733,7 +834,7 @@
             </section>
 
             <!-- SLIDE 15: CONCLUSION [OLD SLIDE 8] -->
-            <section class="slide" id="slide-15" data-index="15">
+            <section class="slide" id="slide-17" data-index="17">
                 <div class="slide-content text-center">
                     <span class="badge">Geleceğe Doğru</span>
                     <h2 class="slide-title text-center">Geleceğin Sınıfını Birlikte Tasarlayalım! 🚀</h2>
@@ -797,7 +898,7 @@
                     <i class="fa-solid fa-arrow-rotate-left"></i> Başa Dön
                 </button>
                 <div class="progress-bar-container">
-                    <div class="progress-bar" id="progress-bar" style="width: 6.66%;"></div>
+                    <div class="progress-bar" id="progress-bar" style="width: 5.88%;"></div>
                 </div>
                 <button class="nav-btn" id="next-btn" onclick="nextSlide()" aria-label="Sonraki Slayt">
                     İleri <i class="fa-solid fa-chevron-right"></i>
