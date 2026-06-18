@@ -798,7 +798,7 @@ body {
 .simulator-container {
     display: grid;
     grid-template-columns: 280px 1fr;
-    height: 580px;
+    height: 490px;
     border-radius: var(--border-radius-md);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -2582,6 +2582,22 @@ body {
         transform: scale(1.15);
         box-shadow: 0 0 12px currentColor;
     }
+}
+
+/* Custom Scrollbars for dark theme consistency */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.15);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
 }
 
 

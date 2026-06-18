@@ -177,6 +177,11 @@ Bu bölüm, öğretmen eğitiminde ele alınan 10 ana modülün detaylı açıkl
 * **Sosyal Bilgiler:** "1920 yılında Ankara'da Büyük Millet Meclisi'nin açılışına tanıklık eden genç bir gazetecinin ağzından kurgusal bir gazete haberi yaz."
 * **İngilizce:** "Create a CEFR A2 level short reading passage about visiting Cappadocia. Include a vocabulary list with English definitions of 5 target words."
 * **Bilişim Teknolojileri:** "Scratch programında 'Eğer İse' ve 'Değişkenler' bloklarını anlatan 3 adet kısa algoritma senaryosu oluştur."
+* **Din Kültürü ve Ahlak Bilgisi:** "7. Sınıf. Konu: Ahlaki Davranışlar (Gıybet, yalan vb.). Sınıf içi tartışma başlatacak, günlük yaşam senaryolu 1 adet rol oynama senaryosu ve tartışma soruları hazırla."
+* **Görsel Sanatlar:** "6. Sınıf. Konu: Renk Bilgisi (Sıcak/soğuk renkler). Öğrencilerin evdeki atık malzemelerle yapabileceği yaratıcı bir proje yönergesi ve değerlendirme kriterleri oluştur."
+* **Müzik:** "5. Sınıf. Konu: İstiklal Marşı'nı doğru okuma ve tartım. Öğrencilerin İstiklal Marşı'nın ritim ve hece vuruşlarını kavraması için ritim kalıbı alkış etkinliği ve öğretmen yönergesi hazırla."
+* **Beden Eğitimi ve Spor:** "8. Sınıf. Konu: Basketbolda pas teknikleri. Sınıf mevcudu 30 olan bir grupta, göğüs pası ve sektirme pası tekniklerini eğlenceli şekilde öğretecek 2 adet istasyon çalışması ve süre planı hazırla."
+* **Teknoloji ve Tasarım:** "7. Sınıf. Konu: Engelsiz Yaşam Teknolojileri. Tasarım odaklı düşünme (design thinking) metodolojisini kullanarak engelli bireylerin hayatını kolaylaştıracak ürün taslak çalışması için proje şablonu ve rehber sorular hazırla."
 
 ### Modül 10: Sorun Giderme ve SSS
 * **Quota Exceeded Hatası:** Dakikadaki veya günlük istek limiti aşıldığında oluşur. 1 dakika bekleyip istek sıklığı azaltılmalıdır.
